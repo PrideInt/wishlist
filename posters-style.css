@@ -7,7 +7,7 @@
 body {
     min-height: 100vh;
     background: #d8d8d8;
-    font-family: "Courier New", Courier, monospace;
+    font-family: "Courier Prime", Courier, monospace;
     color: #111;
 }
 
@@ -19,6 +19,42 @@ body {
     align-items: center;
 
     padding: 48px 24px;
+
+    flex-direction: column;
+    gap: 32px;
+}
+
+.download-btn {
+    padding: 12px 22px;
+
+    background: #111;
+    color: #f4f4f4;
+
+    border: 1px solid #111;
+    border-radius: 4px;
+
+    font-family: inherit;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+
+    cursor: pointer;
+
+    transition:
+        background .25s ease,
+        color .25s ease,
+        transform .25s ease;
+}
+
+.download-btn:hover {
+    background: #fafafa;
+    color: #111;
+    transform: translateY(-2px);
+}
+
+.download-btn:disabled {
+    opacity: .6;
+    cursor: wait;
+    transform: none;
 }
 
 .poster-grid {

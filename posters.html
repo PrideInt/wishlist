@@ -3,12 +3,25 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
         <title>Poster Grid</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
         <link rel="stylesheet" href="posters-style.css" />
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
     </head>
 
     <body>
         <main class="poster-page">
+            <button id="download-all" class="download-btn">
+                Download All Posters
+            </button>
+
             <section class="poster-grid">
                 <!-- Poster cards sourced from /posters -->
                 <article class="poster-card">
@@ -93,5 +106,36 @@
 
             </section>
         </main>
+
+        <script>
+            const button = document.getElementById("download-all");
+
+            button.addEventListener("click", async () => {
+
+                button.disabled = true;
+                button.textContent = "Preparing ZIP...";
+
+                const zip = new JSZip();
+                const images = document.querySelectorAll(".poster-card img");
+
+                for (const img of images) {
+                    const response = await fetch(img.src);
+                    const blob = await response.blob();
+
+                    const filename = img.src.split("/").pop();
+
+                    console.log(`Adding ${filename} to ZIP...`);
+
+                    zip.file(filename, blob);
+                }
+
+                const content = await zip.generateAsync({ type: "blob" });
+
+                saveAs(content, "posters.zip");
+
+                button.disabled = false;
+                button.textContent = "Download All Posters";
+            });
+        </script>
     </body>
 </html>
