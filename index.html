@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Wishlist</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+
+        <canvas id="bg-canvas"></canvas>
+
+        <div class="container">
+            <header>
+                <h1>Pride's Wishlist</h1>
+                <p>December 3. Remember the date! I don't really want gifts like that. Just a personal letter is enough &lt;3 <br><br> But if you really want to buy me a gift, here you go: </p>
+            </header>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th class="price">Price</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td class="item"
+                            data-title="One Wish Willow"
+                            data-description="An OFFICIAL One Wish Willow. Not from Etsy or Amazon. The real deal."
+                            data-link="https://onewishwillow.com"
+                            data-linktext="onewishwillow.com"
+                            data-image="images/onewishwillow.png">
+                            One Wish Willow
+                        </td>
+                        <td>$6.99</td>
+                    </tr>
+
+                    <tr>
+                        <td class="item"
+                            data-title="Neon Genesis Evangelion x WASA Super Train Robot"
+                            data-description="All 6 boxes! There's a box at TESO X in Flushing too."
+                            data-link="https://maps.app.goo.gl/Pur7UHJrFSdBB6TP6"
+                            data-linktext="TESO"
+                            data-image="images/evangelion.jpg">
+                            Neon Genesis Evangelion x WASA Super Train Robot
+                        </td>
+                        <td>~$144.00</td>
+                    </tr>
+
+                    <tr>
+                        <td class="item"
+                            data-title="KODAK Super 8 Film Camera"
+                            data-description="This is for the rich people. Very expensive."
+                            data-link="https://www.kodak.com/en/motion/product/super-8/super-8-camera/"
+                            data-linktext="KODAK"
+                            data-image="images/super8.png">
+                            KODAK Super 8 Film Camera
+                        </td>
+                        <td>$5,495</td>
+                    </tr>
+
+                    <tr>
+                        <td class="item"
+                            data-title="Yubikey 5C NFC"
+                            data-description="I lost mine."
+                            data-link="https://www.yubico.com/product/yubikey-5c-nfc/"
+                            data-linktext="yubico.com"
+                            data-image="images/yubikey.png">
+                            Yubikey 5C NFC
+                        </td>
+                        <td>$55</td>
+                    </tr>
+
+                    <tr>
+                        <td class="item"
+                            data-title="Linux Box (Lenovo ThinkCentre M75Q Gen 5 Tiny)"
+                            data-description="A Linux box, aka, a mini PC that runs Linux. This is the Lenovo ThinkCentre M75Q Gen 5 Tiny, which is a small form factor desktop computer that can run Linux. Also expensive."
+                            data-link="https://www.lenovo.com/us/en/p/desktops/thinkcentre/m-series-tiny/lenovo-thinkcentre-m75q-gen-5-tiny-amd/len102c0051#models"
+                            data-linktext="Lenovo"
+                            data-image="images/thinkcentre.png">
+                            Linux Box
+                        </td>
+                        <td>$1,099</td>
+                    </tr>
+
+                    <tr>
+                        <td class="item"
+                            data-title="Lexar Magnetic External SSD"
+                            data-description="An external storage thing for my phone. It's also magnetic."
+                            data-link="https://www.amazon.com/Magnetic-External-Compatible-Smartphones-Supports-LES5XXX001T-RNWNU/dp/B0FPHYS9TW?th=1"
+                            data-linktext="Amazon"
+                            data-image="images/lexar.png">
+                            Lexar Magnetic External SSD
+                        </td>
+                        <td>$149.99</td>
+                    </tr>
+
+                    <tr>
+                        <td class="item"
+                            data-title="Posters"
+                            data-description="A bunch of movie posters of my favorite movies you can print off FedEx or Staples or something. Click to view."
+                            data-link="posters.html"
+                            data-linktext="View Posters"
+                            data-image="images/posters.png">
+                            Posters
+                        </td>
+                        <td>prob $100-something</td>
+                    </tr>
+
+                    <tr>
+                        <td class="item"
+                            data-title="Cool Shirtz x Minecraft Black Sheep Ushanka"
+                            data-description="It's soooooo cuteeeeeeeeee."
+                            data-link="https://shirtz.cool/products/the-sheep-ushanka?variant=42234807877730"
+                            data-linktext="Cool Shirtz"
+                            data-image="images/ushanka.png">
+                            Cool Shirtz x Minecraft Black Sheep Ushanka
+                        </td>
+                        <td>$48.00</td>
+                    </tr>
+
+                    <tr>
+                        <td class="item"
+                            data-title="Cool Shirtz x Minecraft Black Sheep Sherpa"
+                            data-description="It's so fluffy and it combos with the ushanka."
+                            data-link="https://shirtz.cool/products/the-sheep-sherpa-black?variant=42066211831906"
+                            data-linktext="Cool Shirtz"
+                            data-image="images/sherpa.png">
+                            Cool Shirtz x Minecraft Black Sheep Sherpa
+                        </td>
+                        <td>$106.00</td>
+                    </tr>
+
+                    <tr>
+                        <td class="item"
+                            data-title="Zojirushi Gourmet Sizzler®"
+                            data-description="A fancy electric skillet that I can use to cook food in my room."
+                            data-link="https://store.zojirushi.com/products/eabdc?srsltid=AfmBOooNIGsD66uHNm6y97il1aZz5q0ca7QU0U-eNxazPSDcPU3yu2sW"
+                            data-linktext="Zojirushi"
+                            data-image="images/zojirushi.png">
+                            Zojirushi Gourmet Sizzler®
+                        </td>
+                        <td>$147.99</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+        <div class="overlay" id="overlay">
+            <div class="modal">
+                <h2 id="modalTitle"></h2>
+
+                <img id="modalImage" src="" alt="">
+
+                <p id="modalDescription"></p>
+
+                <div class="where">
+                    <span>Where to get:</span>
+                    <a id="modalLink" href="#" target="_blank" rel="noopener noreferrer"></a>
+                </div>
+
+                <button id="closeBtn">
+                    Close
+                </button>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
